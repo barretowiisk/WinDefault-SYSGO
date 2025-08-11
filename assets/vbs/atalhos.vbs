@@ -7,7 +7,7 @@ WinShared = WScript.Arguments.Item(0)
 WinFOLDER = WScript.Arguments.Item(1)
 
 ' Criando atalho para o suporte
-Set oUrlLink = WshShell.CreateShortcut(strDesktop & "\SysGO Soluções.lnk")
+Set oUrlLink = WshShell.CreateShortcut(strDesktop & "\SysGO.lnk")
 oUrlLink.TargetPath = "https://sysgo.com.br/"
 oUrlLink.IconLocation = WinFOLDER & "\assets\vbs\sysgo.ico"
 oUrlLink.Save
