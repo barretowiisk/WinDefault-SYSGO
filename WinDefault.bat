@@ -279,7 +279,7 @@ ECHO.>>%winLOG%
 ECHO - Importacao de Arquivos de Registro>>%winLOG%
 FOR /F "tokens=4" %%R IN (' dir "%winFOLDER%\assets\reg\" ^| findstr /I /C:".reg" ') DO (
     REG IMPORT %winFOLDER%\assets\reg\%%R >NUL 2>&1
-    IF %ErrorLevel% EQU 0 (
+    IF %ErrorLevel% NEQ 0 (
         ECHO %%R Importada com sucesso.>>%winLOG%
     ) ELSE (
         ECHO %%R Falhou na importacao.>>%winLOG%
